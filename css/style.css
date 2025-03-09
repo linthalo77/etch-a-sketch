@@ -22,16 +22,17 @@ button {
     display: flex;
     flex: 1;
     justify-content: center;
-    align-self: center;
+    flex-shrink: 0;
 }
 
 .grid-container {
     display: flex;
     flex-basis: 800px;
-    max-height: 800px;
+    min-height: 800px;
     flex-wrap: wrap;
     align-content: flex-start;
     flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .grid-container > .square {
