@@ -1,8 +1,21 @@
 body {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     margin: 0px;
     padding: 0px;
+    align-items: center;
+}
+
+button {
+    color: white;
+    background-color: #3882F6;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 16px 48px;
+    margin: 24px;
 }
 
 .sketch-board {
@@ -14,16 +27,16 @@ body {
 
 .grid-container {
     display: flex;
-    width: 432px;
-    height: 432px;
+    flex-basis: 800px;
+    max-height: 800px;
     flex-wrap: wrap;
     align-content: flex-start;
-    flex-shrink: 1;
+    flex-grow: 0;
 }
 
-.grid-container > div {
+.grid-container > .square {
     display: flex;
-    flex-grow: 0;
+    flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
 }
