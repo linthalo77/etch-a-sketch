@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sketch-board {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-self: center;
+}
+
+.grid-container {
+    display: flex;
+    width: 432px;
+    height: 432px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-shrink: 1;
+}
+
+.grid-container > div {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
