@@ -9,7 +9,7 @@ window.onload = () => {
     console.log("Started Code");
     rowSize = 16;                                                           // default 16 x 16
     squaresToBeGenerated = rowSize * rowSize + (rowSize + 1);               // need to add (squareNum + 1) to compensate for line break squares
-    squareSize = Math.round((sketchboardSize / rowSize) -2);                // -2 because of border size
+    squareSize = (sketchboardSize / rowSize) -2;                            // -2 because of border size
     generateGrid();
     addHover();
 }
@@ -44,10 +44,17 @@ function deleteGrid() {
 }
 
 btnSquares.addEventListener("click", () => {
-    rowSize = prompt("Size of grid? (eg. 16 = 16x16 grid)");
+    while(true) {
+        rowSize = prompt("Size of grid? (eg. 16 = 16x16 grid)");
+        if (rowSize > 100) {
+            alert("Sorry! Values over 100 are not allowed.")
+        } else {
+            break;
+        }
+    }
     rowSize = +rowSize;
     squaresToBeGenerated = rowSize * rowSize + (rowSize + 1);               // need to add (squareNum + 1) to compensate for line break squares
-    squareSize = Math.round((sketchboardSize / rowSize) -2);                // -2 because of border size
+    squareSize = (sketchboardSize / rowSize) -2;                            // -2 because of border size
     deleteGrid();
     generateGrid();
     addHover();
