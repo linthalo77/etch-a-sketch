@@ -4,7 +4,7 @@ const changeGrid = document.querySelector(".change-grid");
 const sketchboardSize = 800;                                                // 800x800 px
 
 function generateGrid(size) {
-    let squareSize = sketchboardSize / size - 2;
+    let squareSize = sketchboardSize / size - 2;                            // subtract 2 because of border size
     for (let i = 0; i < (+size * +size); ++i) {
         const square = document.createElement("div");
 
@@ -13,7 +13,7 @@ function generateGrid(size) {
 
         gridContainer.appendChild(square);
     }
-    
+
     addHover();
 }
 
