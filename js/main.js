@@ -42,7 +42,7 @@ generateGrid(16);
 changeGrid.addEventListener("click", () => {
     let size = +prompt("Size of grid? (eg. 16 = 16x16 grid)");
     while(size > 100 || size < 1) {
-        alert("Sorry! Values over 100 are not allowed.")
+        alert("Sorry! Values must be between 0 and 100.")
         size = +prompt("Size of grid? (eg. 16 = 16x16 grid)");
     }
 
